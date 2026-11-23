@@ -1,0 +1,5 @@
+#!/bin/bash
+# One-shot question to opencode:  ? "how do I grep for a tab?"
+# Default model can be overridden: OPENCODE_MODEL=provider/model ? "question"
+# or per-call: ? -m provider/model "question"
+exec opencode run -m "${OPENCODE_MODEL:-opencode/glm-5.3-flash}" "$@"
