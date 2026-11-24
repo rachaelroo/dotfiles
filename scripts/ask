@@ -1,5 +1,7 @@
 #!/bin/bash
-# One-shot question to opencode:  ? "how do I grep for a tab?"
-# Default model can be overridden: OPENCODE_MODEL=provider/model ? "question"
-# or per-call: ? -m provider/model "question"
-exec opencode run -m "${OPENCODE_MODEL:-opencode/glm-5.3-flash}" "$@"
+# One-shot question to opencode:  ask "how do I grep for a tab?"
+# Default model can be overridden: OPENCODE_MODEL=provider/model ask "question"
+# or per-call: ask -m provider/model "question"
+
+# Filter the model banner ("> build · model") from stderr, pass real errors through.
+exec opencode run -m "${OPENCODE_MODEL:-opencode/glm-5.3-flash}" "$@" 2> >(grep -v '^> ' >&2)
