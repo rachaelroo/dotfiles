@@ -1,7 +1,7 @@
 # ============================================================================
 #  bashrc - minimal, portable, dependency-free (Bash 3.2+)
-#  Copy/symlink to ~/.bashrc. For login shells (including macOS Terminal), add
-#  this to ~/.bash_profile: [[ -f ~/.bashrc ]] && . ~/.bashrc
+#  Copy/symlink to ~/.bashrc. Login shells (including macOS Terminal) read
+#  ~/.bash_profile instead, which the repo also provides and which sources this.
 #  Machine-specific settings (keys, exports, aliases) go in ~/.bashrc.local,
 #  which is sourced at the end of this file and not tracked in the repo.
 # ============================================================================

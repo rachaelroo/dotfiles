@@ -287,3 +287,8 @@ augroup vimrc_general
   autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
   autocmd FileType make setlocal noexpandtab
 augroup END
+
+" --- Machine-specific additions (not tracked) -------------------------------
+if filereadable(expand('~/.vimrc.local'))
+  source ~/.vimrc.local
+endif

@@ -1,0 +1,7 @@
+# Repo-only files that must never be linked into $HOME.
+.DS_Store
+
+# Editor scratch files.
+*.swp
+*.swo
+*~
